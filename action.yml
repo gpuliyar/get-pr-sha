@@ -1,0 +1,18 @@
+name: Get PR SHA
+description: Get the Pull Request Head SHA
+branding:
+  icon: git-pull-request
+  color: blue
+inputs:
+  repository:
+    description: Git Repository name
+    required: true
+  pr-number:
+    description: PR number in the Git Repository
+    required: true
+outputs:
+  sha:
+    description: Pull Request Head SHA
+runs:
+  using: node16
+  main: dist/index.js
